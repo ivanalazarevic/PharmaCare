@@ -1,0 +1,22 @@
+.card-container{
+  &:hover{
+    border-color: hsl(var(--secondary));
+    scale: 1.04;
+    transition: ease-in-out .3s;
+  }
+}
+
+.delete-icon{
+    color: red;
+  &:hover{
+    scale: 1.05;
+    cursor: pointer;
+  }
+}
+.edit-icon{
+  color: hsl(var(--secondary));
+  &:hover{
+    cursor: pointer;
+    scale: 1.05;
+  }
+}
