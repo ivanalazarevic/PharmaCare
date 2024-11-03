@@ -1,24 +1,22 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
+import parser from '@typescript-eslint/parser'
+
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
+  pluginReact.configs.flat.recommended,
   {
-    ignores:  ["src/components/ui/*"]
-  },
-  {
-    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    files: ["**/*.{js,ts,mjs,cjs,tsx,jsx}"],
     languageOptions: {
-      globals: globals.browser,
+      parser: parser,
+      sourceType: "module",
+      ecmaVersion: 'latest'
     },
     rules: {
-      "react/react-in-jsx-scope": "off",
-      "react/jsx-filename-extension": [1, { "extensions": [".js",".ts", ".jsx", ".tsx"] }],
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/no-unescaped-entities': 'off',
+      'react/no-unknown-property': 'off'
     },
   },
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
 ];
