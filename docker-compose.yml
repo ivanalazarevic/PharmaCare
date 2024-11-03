@@ -1,5 +1,7 @@
 services:
   pharma-care:
+    container_name: pharma-care
+    image: pharma-care:1.0.0
     build:
       context: .
     ports:
