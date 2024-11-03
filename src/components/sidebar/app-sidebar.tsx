@@ -20,7 +20,6 @@ export function AppSidebar() {
         {url: '/stats', name: 'Statistics', icon: ChartPie},
         {url: '/about', name: 'About application', icon: Info},
     ];
-    const title = 'PharmaCare'
 
     return (
         <Sidebar collapsible={'icon'}>

@@ -1,14 +1,14 @@
 import './App.scss';
-import {AppSidebar} from "@/components/sidebar/app-sidebar.tsx";
-import {Route, Router, Routes} from "react-router-dom";
-import Products from "@/pages/products/products";
+import CreateProduct from "@/pages/create-product/create-product";
+import  {Fragment} from "react";
+import {ROUTES} from "@/core/consts/routes";
+import {Route, Routes} from "react-router-dom";
+import Layout from "@/layout";
 import Statistics from "@/pages/statistics/statistics";
 import AboutUs from "@/pages/about-us/about-us";
-import {Fragment} from "react";
-import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
-import Layout from "@/layout";
-import CreateUpdateProduct from "@/pages/create-update-product/create-update-product";
-import {ROUTES} from "@/core/consts/routes";
+import Products from "@/pages/products/products";
+import UpdateProduct from "@/pages/update-product/update-product";
+
 
 function App() {
 
@@ -17,8 +17,8 @@ function App() {
             <Layout>
                 <Routes>
                     <Route path={ROUTES.HOME} element={<Products/>}/>
-                    <Route path={ROUTES.CREATE_PRODUCT} element={<CreateUpdateProduct/>}/>
-                    <Route path={ROUTES.UPDATE_PRODUCT} element={<CreateUpdateProduct/>}/>
+                    <Route path={ROUTES.CREATE_PRODUCT} element={<CreateProduct/>}/>
+                    <Route path={ROUTES.UPDATE_PRODUCT} element={<UpdateProduct/>}/>
                     <Route path={ROUTES.STATS} element={<Statistics/>}/>
                     <Route path={ROUTES.ABOUT} element={<AboutUs/>}/>
                 </Routes>

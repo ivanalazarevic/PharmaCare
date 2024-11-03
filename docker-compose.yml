@@ -1,0 +1,9 @@
+services:
+  pharma-care:
+    build:
+      context: .
+    ports:
+      - "5173:80"
+
+
+

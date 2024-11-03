@@ -6,7 +6,9 @@ import pluginReact from "eslint-plugin-react";
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    extends: ['react-app', 'react-app/jest', 'airbnb', 'prettier'],
+    ignores:  ["src/components/ui/*"]
+  },
+  {
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
     languageOptions: {
       globals: globals.browser,
